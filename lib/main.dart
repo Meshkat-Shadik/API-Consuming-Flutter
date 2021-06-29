@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_riverpod_api/Api/States/api_state.dart';
-import 'package:freezed_riverpod_api/Pages/ApiPage.dart';
+import 'package:freezed_riverpod_api/Api/api_state.dart';
+import 'package:freezed_riverpod_api/presentation/Pages/ApiPage.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));

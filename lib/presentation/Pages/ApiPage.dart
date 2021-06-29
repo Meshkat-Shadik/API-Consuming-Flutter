@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_riverpod_api/Api/States/api_state.dart';
+import 'package:freezed_riverpod_api/Api/api_state.dart';
+import 'package:freezed_riverpod_api/providers.dart';
 
 class ApiPage extends StatefulWidget {
   const ApiPage({Key? key}) : super(key: key);
@@ -51,8 +52,7 @@ class _ApiPageState extends State<ApiPage> {
             child: Text("Error occurred, $e"),
           ),
           orElse: () => Center(
-            child: FlatButton(
-                color: Colors.blue,
+            child: ElevatedButton(
                 child: Text(
                   "Get Single User",
                   style: TextStyle(color: Colors.white),
@@ -64,49 +64,6 @@ class _ApiPageState extends State<ApiPage> {
                 }),
           ),
         );
-
-        // return state.maybeWhen(
-        //   loading: () => Center(
-        //     child: CircularProgressIndicator(),
-        //   ),
-        //   success: (data) => Center(
-        //     child: ListView.builder(
-        //       itemCount: data.length,
-        //       itemBuilder: (context, index) {
-        //         return ListTile(
-        //           title: Text(data[index].name),
-        //           subtitle: Text(data[index].email),
-        //           leading: CircleAvatar(
-        //             child: Text(
-        //               data[index].username,
-        //               maxLines: 3,
-        //               style: TextStyle(
-        //                 fontSize: 8,
-        //               ),
-        //             ),
-        //           ),
-        //         );
-        //       },
-        //     ),
-        //   ),
-        //   error: (e) => Center(
-        //     child: Text("Error occurred, $e"),
-        //   ),
-        //   orElse: () => Center(
-        //     child: FlatButton(
-        //       color: Colors.blue,
-        //       child: Text(
-        //         "Get Single User",
-        //         style: TextStyle(color: Colors.white),
-        //       ),
-        //       onPressed: () {
-        //         print("hi");
-        //       }
-        //         // context
-        //         //     .read(userStateNotifierProvider).
-        //     ),
-        //   ),
-        // );
       }),
     );
   }
