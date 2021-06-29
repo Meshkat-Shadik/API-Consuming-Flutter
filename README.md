@@ -107,7 +107,7 @@ Consumer(
 এখানে Consumer widget নিয়েছি কারণ আমাদের userFutureProvider কে read/watch করতে হবে। 
 
 
-```
+```dart
 final getUserValue = watch(userFutureProvider("https://jsonplaceholder.typicode.com/users"));
 ```
 
