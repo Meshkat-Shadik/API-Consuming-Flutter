@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_riverpod_api/Api/api_state.dart';
-import 'package:freezed_riverpod_api/presentation/Pages/ApiPage.dart';
+
+import 'package:freezed_riverpod_api/presentation/Pages/car_ui_page.dart';
 
 void main() {
   runApp(ProviderScope(child: MyApp()));
@@ -13,9 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Riverpod with Freezed',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
+        primaryColor: Colors.deepOrange,
+        accentColor: Colors.black,
+        brightness: Brightness.dark,
       ),
-      home: ApiPage(),
+      home: CarUI(),
     );
   }
 }

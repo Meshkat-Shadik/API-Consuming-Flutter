@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:freezed_riverpod_api/Api/api_state.dart';
 import 'package:freezed_riverpod_api/providers.dart';
 
 class ApiPage extends StatefulWidget {
@@ -12,11 +11,11 @@ class ApiPage extends StatefulWidget {
 
 class _ApiPageState extends State<ApiPage> {
   @override
-  void initState() {
+  void didChangeDependencies() {
     context
         .read(userStateNotifierProvider.notifier)
         .getUser("https://jsonplaceholder.typicode.com/users");
-    super.initState();
+    super.didChangeDependencies();
   }
 
   @override
