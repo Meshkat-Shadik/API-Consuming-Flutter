@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:freezed_riverpod_api/infrastructure/Model/user_model.dart';
+import 'package:freezed_riverpod_api/infrastructure/Model/user_model/user_model.dart';
 
 abstract class UserRepository {
   Future<List<User>> getUser(String url);
