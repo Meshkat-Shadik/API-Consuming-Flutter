@@ -14,10 +14,11 @@ String carModelToJson(CarModel data) => json.encode(data.toJson());
 
 @freezed
 abstract class CarModel with _$CarModel {
-    const factory CarModel({
-        double? speed,
-        int? doors,
-    }) = _CarModel;
+  const factory CarModel({
+    double? speed,
+    int? doors,
+  }) = _CarModel;
 
-    factory CarModel.fromJson(Map<String, dynamic> json) => _$CarModelFromJson(json);
+  factory CarModel.fromJson(Map<String, dynamic> json) =>
+      _$CarModelFromJson(json);
 }
